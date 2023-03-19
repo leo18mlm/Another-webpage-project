@@ -44,9 +44,10 @@ img {
 /* navbar styling */
 
 .navbar {
+  display: flex;
   background-color: var(--primary-color);
   color: #fff;
-  height: 70px;
+  height: 130px;
 }
 .navbar ul {
   display: flex;
@@ -171,6 +172,8 @@ cloud .grid {
 /* languages */
 .languages .flex {
   flex-wrap: wrap;
+  display: flex;
+  margin: 30px;
 }
 
 .laguages .card {
