@@ -47,7 +47,8 @@ img {
   display: flex;
   background-color: var(--primary-color);
   color: #fff;
-  height: 130px;
+  height: 150px;
+  text-align: ;
 }
 .navbar ul {
   display: flex;
