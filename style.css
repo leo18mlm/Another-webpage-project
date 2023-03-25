@@ -5,6 +5,8 @@
   --secondary-color: #1c3fa8;
   --dark-color: #002240;
   --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
 }
 
 * {
@@ -39,6 +41,18 @@ p {
 }
 img {
   width: 100%;
+}
+
+code,
+pre {
+  background: #d29c9c;
+  color: #fff;
+  padding: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
 }
 
 /* navbar styling */
@@ -89,6 +103,10 @@ img {
   gap: 30px;
 }
 
+.showcase-text {
+  animation: slideInFromLeft 1s ease-in;
+}
+
 .showcase-form {
   position: relative;
   top: 60px;
@@ -136,6 +154,7 @@ img {
 
 .stats {
   padding-top: 100px;
+  animation: slideInFromBottom 1s ease-in;
 }
 
 .stats-heading {
@@ -214,10 +233,66 @@ img {
   padding: 30px;
 }
 
+/* Docs */
+
+.docs-main h3 {
+  margin: 20px 0;
+}
+
+.docs-main .grid {
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+}
+
+.docs-main nav li {
+  font-size: 17px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 5px #d29c9c solid;
+}
+
+.docs-main a:hover {
+  font-weight: bold;
+}
+
 /* Footer */
 
 .footer .social a {
   margin: 0 10px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* Tablets and under */
@@ -225,7 +300,9 @@ img {
   .grid,
   .showcase .grid,
   .stats .grid,
-  .cloud .grid {
+  .cloud .grid,
+  .features-main .grid,
+  .docs-main .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
@@ -247,6 +324,22 @@ img {
   .cli .grid > *:first-child {
     grid-column: 1;
     grid-row: 1;
+  }
+  .features-head,
+  .features-sub-head,
+  .docs-head {
+    text-align: center;
+  }
+
+  .features-head img,
+  .features-sub-head img,
+  .docs-head img {
+    justify-self: center;
+  }
+
+  .features-main .grid > *:first-child,
+  .features-sub-head .grid > *:nth-child(2) {
+    grid-column: 1;
   }
 }
 
