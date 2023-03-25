@@ -47,14 +47,13 @@ img {
   display: flex;
   background-color: var(--primary-color);
   color: #fff;
-  height: 150px;
-  text-align: center;
+  height: 70px;
 }
 .navbar ul {
   display: flex;
 }
 
-.navbar .flex {
+.navbar {
   justify-content: space-between;
 }
 
