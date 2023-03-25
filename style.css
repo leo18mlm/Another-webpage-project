@@ -165,7 +165,7 @@ img {
 
 /* cloud */
 
-cloud .grid {
+.cloud .grid {
   grid-template-columns: 4fr 3fr;
 }
 
