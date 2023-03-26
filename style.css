@@ -58,11 +58,22 @@ pre {
 /* navbar styling */
 
 .navbar {
-  display: flex;
   background-color: var(--primary-color);
   color: #fff;
-  height: 200px;
+  height: 100px;
 }
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .navbar ul {
   display: flex;
 }
